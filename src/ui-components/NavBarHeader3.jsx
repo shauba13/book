@@ -7,8 +7,8 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "./utils";
-import { Button, Flex, Text } from "@aws-amplify/ui-react";
-export default function NavBarHeader(props) {
+import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
+export default function NavBarHeader3(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
@@ -22,9 +22,14 @@ export default function NavBarHeader(props) {
       boxShadow="0px 2px 6px rgba(0.05098039284348488, 0.10196078568696976, 0.14901961386203766, 0.15000000596046448)"
       padding="24px 32px 24px 32px"
       backgroundColor="rgba(255,255,255,1)"
-      {...getOverrideProps(overrides, "NavBarHeader")}
+      {...getOverrideProps(overrides, "NavBarHeader3")}
       {...rest}
     >
+      <View
+        width="127.88px"
+        height="18.91px"
+        {...getOverrideProps(overrides, "LogoWithText")}
+      ></View>
       <Flex
         gap="40px"
         direction="row"
@@ -37,7 +42,7 @@ export default function NavBarHeader(props) {
         basis="0"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 3213867687")}
+        {...getOverrideProps(overrides, "Frame 3213871959")}
       >
         <Text
           fontFamily="Inter"
@@ -57,8 +62,8 @@ export default function NavBarHeader(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Home"
-          {...getOverrideProps(overrides, "Home")}
+          children="Dashboard"
+          {...getOverrideProps(overrides, "Dashboard")}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -78,8 +83,8 @@ export default function NavBarHeader(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Books"
-          {...getOverrideProps(overrides, "Books")}
+          children="Jobs"
+          {...getOverrideProps(overrides, "Jobs")}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -99,33 +104,64 @@ export default function NavBarHeader(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Cart"
-          {...getOverrideProps(overrides, "Cart")}
+          children="Applicants"
+          {...getOverrideProps(overrides, "Applicants")}
+        ></Text>
+        <Text
+          fontFamily="Inter"
+          fontSize="16px"
+          fontWeight="400"
+          color="rgba(92,102,112,1)"
+          lineHeight="24px"
+          textAlign="left"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Company"
+          {...getOverrideProps(overrides, "Company")}
         ></Text>
       </Flex>
       <Flex
         gap="32px"
         direction="row"
-        width="291px"
-        height="45px"
+        width="unset"
+        height="unset"
         justifyContent="flex-end"
         alignItems="center"
-        shrink="0"
+        grow="1"
+        shrink="1"
+        basis="0"
         position="relative"
-        boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 3213867692")}
+        {...getOverrideProps(overrides, "Frame 3213871964")}
       >
-        <Button
-          width="unset"
-          height="unset"
+        <View
+          width="24px"
+          height="24px"
+          {...getOverrideProps(overrides, "MyIcon")}
+        ></View>
+        <Image
+          width="45px"
+          height="45px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
-          size="small"
-          isDisabled={false}
-          variation="default"
-          children="Sign Out"
-          {...getOverrideProps(overrides, "Button")}
-        ></Button>
+          position="relative"
+          borderRadius="160px"
+          padding="0px 0px 0px 0px"
+          objectFit="cover"
+          {...getOverrideProps(overrides, "image")}
+        ></Image>
       </Flex>
     </Flex>
   );

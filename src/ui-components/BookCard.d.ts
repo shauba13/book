@@ -17,20 +17,18 @@ export declare type Variant = {
     overrides: EscapeHatchProps;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type NavBarHeader2OverridesProps = {
-    NavBarHeader2?: PrimitiveOverrideProps<FlexProps>;
-    "Frame 5"?: PrimitiveOverrideProps<FlexProps>;
-    "Group 1"?: PrimitiveOverrideProps<FlexProps>;
-    "icons8-book-shelf-48 1"?: PrimitiveOverrideProps<ImageProps>;
-    AnyBook?: PrimitiveOverrideProps<TextProps>;
-    Home?: PrimitiveOverrideProps<TextProps>;
-    Books?: PrimitiveOverrideProps<TextProps>;
-    Cart?: PrimitiveOverrideProps<TextProps>;
-    actions?: PrimitiveOverrideProps<FlexProps>;
-    Button39493466?: PrimitiveOverrideProps<ButtonProps>;
-    Button39493467?: PrimitiveOverrideProps<ButtonProps>;
+export declare type BookCardOverridesProps = {
+    BookCard?: PrimitiveOverrideProps<FlexProps>;
+    image?: PrimitiveOverrideProps<ImageProps>;
+    "Card Area"?: PrimitiveOverrideProps<FlexProps>;
+    "Main Text"?: PrimitiveOverrideProps<FlexProps>;
+    "Book Name"?: PrimitiveOverrideProps<TextProps>;
+    Author?: PrimitiveOverrideProps<TextProps>;
+    Genre?: PrimitiveOverrideProps<TextProps>;
+    Price?: PrimitiveOverrideProps<TextProps>;
+    Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
-export declare type NavBarHeader2Props = React.PropsWithChildren<Partial<FlexProps> & {
-    overrides?: NavBarHeader2OverridesProps | undefined | null;
+export declare type BookCardProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: BookCardOverridesProps | undefined | null;
 }>;
-export default function NavBarHeader2(props: NavBarHeader2Props): React.ReactElement;
+export default function BookCard(props: BookCardProps): React.ReactElement;

@@ -5,7 +5,8 @@
  **************************************************************************/
 
 import * as React from "react";
-import { ButtonProps, FlexProps, TextProps } from "@aws-amplify/ui-react";
+import { BookCardProps } from "./BookCard";
+import { CollectionProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;
@@ -17,16 +18,17 @@ export declare type Variant = {
     overrides: EscapeHatchProps;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type NavBarHeaderOverridesProps = {
-    NavBarHeader?: PrimitiveOverrideProps<FlexProps>;
-    "Frame 3213867687"?: PrimitiveOverrideProps<FlexProps>;
-    Home?: PrimitiveOverrideProps<TextProps>;
-    Books?: PrimitiveOverrideProps<TextProps>;
-    Cart?: PrimitiveOverrideProps<TextProps>;
-    "Frame 3213867692"?: PrimitiveOverrideProps<FlexProps>;
-    Button?: PrimitiveOverrideProps<ButtonProps>;
+export declare type BookCardCollectionOverridesProps = {
+    BookCardCollection?: PrimitiveOverrideProps<CollectionProps>;
+    BookCard?: BookCardProps;
 } & EscapeHatchProps;
-export declare type NavBarHeaderProps = React.PropsWithChildren<Partial<FlexProps> & {
-    overrides?: NavBarHeaderOverridesProps | undefined | null;
+export declare type BookCardCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
+    overrideItems?: (collectionItem: {
+        item: any;
+        index: number;
+    }) => BookCardProps;
+} & {
+    overrides?: BookCardCollectionOverridesProps | undefined | null;
 }>;
-export default function NavBarHeader(props: NavBarHeaderProps): React.ReactElement;
+export default function BookCardCollection(props: BookCardCollectionProps): React.ReactElement;
